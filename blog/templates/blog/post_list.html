@@ -8,15 +8,12 @@
         </div>
 
         <div>
-            <p>published: 17.06.2017, 15.22</p>
-            <h2><a href="">My first post</a></h2>
-            <p>-placeholder-</p>
-        </div>
-
-        <div>
-            <p>published: 17.06.2017, 15.23</p>
-            <h2><a href="">My second post</a></h2>
-            <p>-placeholder-</p>
+          {% for post in posts %}
+          <div>
+       <p>published: {{ post.published_date }}</p>
+       <h1><a href="">{{ post.title }}</a></h1>
+       <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
         </div>
     </body>
 </html>
